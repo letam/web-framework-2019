@@ -3,34 +3,28 @@ Boring web framework to get stuff done. A framework on top of a framework.
 
 ## Tech Stack
 - [Python programming language](https://www.python.org)
-- [Django web framework](https://www.djangoproject.com/)
+- [Django web framework](https://www.djangoproject.com)
+- [JavaScript programming language](https://developer.mozilla.org/docs/Web/JavaScript)
+- [Node.js JavaScript runtime](https://nodejs.org)
+- [React user interface library](https://reactjs.org)
+- [Next.js React framework](https://nextjs.org)
 
 ## Setup for Local Development
 1. Install latest Python binary
 
-2. Download and unzip project from [https://github.com/letam/web-framework/master.zip](https://github.com/letam/web-framework/archive/master.zip)
+2. Install latest Node binary
 
-3. Open terminal and change present directory to be the project directory
+3. Download and unzip project from [https://github.com/letam/web-framework/master.zip](https://github.com/letam/web-framework/archive/master.zip)
 
-4. Create and activate python virtual environment for the project
-    ```
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
+4. Open terminal and change present directory to be the project directory
 
-5. Install project requirements
+5. Install and setup project requirements
     ```
-    pip install -U pip
-    pip install -r requirements.txt
+    ./install.sh
     ```
 
-6. Run project migrations
+6. Run the development servers
     ```
-    python server/manage.py migrate
-    ```
-
-7. Run the development server
-    ```
-    python server/manage.py runserver
+    npm run dev
     ```
 
