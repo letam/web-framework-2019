@@ -1,5 +1,5 @@
 # web-framework
-Boring web framework to get stuff done. A framework on top of a framework.
+Boring/monstrous web framework to get stuff done. A framework on top of frameworks.
 
 ## Tech Stack
 - [Python programming language](https://www.python.org)
@@ -12,7 +12,7 @@ Boring web framework to get stuff done. A framework on top of a framework.
 ## Setup for Local Development
 1. Install latest Python binary
 
-2. Install latest Node binary
+2. Install latest Node.js binary
 
 3. Download and unzip project from [https://github.com/letam/web-framework/master.zip](https://github.com/letam/web-framework/archive/master.zip)
 
