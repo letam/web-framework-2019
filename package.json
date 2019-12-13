@@ -6,9 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "manage.py": "venv/bin/python server/manage.py",
     "gui": "cd gui && npm run",
-    "dev": "cross-env FORCE_COLOR=1 npm-run-all -l -p dev:**",
-    "dev:server": "npm run manage.py runserver",
-    "dev:gui": "npm run gui dev"
+    "dev": "cross-env FORCE_COLOR=1 npm-run-all -p dev:**",
+    "dev:server": "venv/bin/python server/manage.py runserver_plus",
+    "dev:gui": "cd gui && npm run dev"
   },
   "repository": {
     "type": "git",
