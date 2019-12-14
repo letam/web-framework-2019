@@ -12,6 +12,10 @@ def api(request):
         counter = Counter(count=0)
 
     if request.method == "POST":
+        if request.content_type != "application/json":
+            return HttpResponseBadRequest("Content type must be 'application/json'")
+        elif request.body.decode() == "{}":
+            return HttpResponseBadRequest("Request body is required")
         data = json.loads(request.body)
         counter.count = data["count"]
         counter.save()

@@ -47,3 +47,15 @@ class APITestCase(TestCase):
         """ Ensure that data retrieved from server after request is correct """
         response = self.client.get("/api/counter")
         self.assertEqual(response.json()["count"], 0)
+
+    def test_post_without_acceptable_content_type_should_fail(self):
+        """ Test POST request without acceptable content type """
+        response = self.client.post("/api/counter")
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.content.decode(), "Content type must be 'application/json'")
+
+    def test_post_without_body_should_fail(self):
+        """ Test POST request without body """
+        response = self.client.post("/api/counter", content_type="application/json")
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.content.decode(), "Request body is required")
