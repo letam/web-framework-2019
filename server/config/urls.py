@@ -18,9 +18,12 @@ from django.urls import path
 
 from apps.website import views
 
+from apps.counter.views import api as counter_api
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', views.index),
+    path('api/counter', counter_api),
 ]
