@@ -1,0 +1,39 @@
+{
+  "name": "web-framework",
+  "version": "0.1.0",
+  "description": "Full-stack web framework build on Django and React.js",
+  "scripts": {
+    "test": "yarn test:server && yarn test:gui",
+    "test:server": "./tests/test-server-apps.sh",
+    "test:gui": "cd gui && yarn test",
+    "manage.py": "venv/bin/python server/manage.py",
+    "gui": "cd gui && yarn",
+    "dev": "cross-env FORCE_COLOR=1 npm-run-all -p dev:**",
+    "dev:server": "venv/bin/python server/manage.py runserver",
+    "dev:gui": "cd gui && yarn start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/letam/web-framework.git"
+  },
+  "keywords": [
+    "web",
+    "webapp",
+    "fullstack",
+    "spa",
+    "django",
+    "reactjs",
+    "python",
+    "typescript"
+  ],
+  "author": "Tam Le",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/letam/web-framework/issues"
+  },
+  "homepage": "https://github.com/letam/web-framework#readme",
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "npm-run-all": "^4.1.5"
+  }
+}
