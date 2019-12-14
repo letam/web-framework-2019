@@ -5,7 +5,9 @@
   "scripts": {
     "test": "yarn test:server && yarn test:gui",
     "test:server": "./tests/test-server-apps.sh",
+    "test:server-app": "venv/bin/python server/manage.py test",
     "test:gui": "cd gui && yarn test",
+    "pip-install": "venv/bin/pip install -U pip && venv/bin/pip install",
     "manage.py": "venv/bin/python server/manage.py",
     "gui": "cd gui && yarn",
     "dev": "cross-env FORCE_COLOR=1 npm-run-all -p dev:**",
