@@ -34,3 +34,10 @@ Boring web framework to get stuff done. A framework on top of a framework.
     python server/manage.py runserver
     ```
 
+## Run Tests in Local Development
+The test scripts are located in the `tests` directory.
+
+To run tests for all django/server apps in the project, run:
+    ```
+    ./tests/test-server-apps.sh
+    ```
