@@ -1,10 +1,11 @@
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import csrf_exempt
 import json
 
 from .models import Counter
 
-
+@csrf_exempt
 @require_http_methods(["GET", "POST", "DELETE"])
 def api(request):
     counter = Counter.objects.first()
