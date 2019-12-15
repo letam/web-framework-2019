@@ -9,10 +9,15 @@ const Counter: React.FC = () => {
 
   /* Occurs when component is initially created. */
   useEffect(() => {
+    let isMounted = true;
     originalTitle = document.title;
+    /* Get initial data for component */
     fetch(API_URL + '/counter')
       .then(res => res.json())
-      .then(({ count }) => setCount(count));
+      .then(({ count }) => isMounted && setCount(count));
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   /* Occurs when component is created as well as whenever it is changed. */
@@ -49,7 +54,7 @@ const Counter: React.FC = () => {
           <p>You clicked {count} times</p>
           <button onClick={increment}>
             Click me
-        </button>
+          </button>
           <button onClick={reset}>
             Reset counter
         </button>
